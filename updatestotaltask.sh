@@ -58,7 +58,7 @@ process_non_ppc64le() {
         cd certs
 
         # Download certificates
-        wget ${ARTIFACTORY_CERT_PATH}
+        curl ${ARTIFACTORY_CERT_PATH}
         if [ $? -ne 0 ]; then
             echo "Error while downloading the certificates"
             exit 1
@@ -69,7 +69,7 @@ process_non_ppc64le() {
 
         # Download and extract the JDK artifact
         cd ../java
-        wget ${ARTIFACT_URL}
+        curl ${ARTIFACT_URL}
         if [ $? -ne 0 ]; then
             echo "Error while downloading the latest version."
             exit 1
@@ -168,7 +168,7 @@ process_ppc64le() {
 
         # Download and extract the JDK artifact only for ppc64le
         cd java
-        wget ${ARTIFACT_URL}
+        curl ${ARTIFACT_URL}
         echo "JDK downloaded "
 
         # Upload the artifact to Artifactory
