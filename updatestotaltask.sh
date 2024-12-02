@@ -3,7 +3,7 @@
 # Define the repository URL and the branch
 REPO_URL="https://github.com/koppulakoushik/version.git"
 BRANCH="main"  # Update this to your actual branch name
-LOCAL_DIR="/e2open/home/kkoppula/javatask3"  # Directory for cloning the repository
+LOCAL_DIR="/tmp/version-repo"  # Directory for cloning the repository
 FILENAME="versionfiles.txt"
  # New file where updated lines will be saved
 git config --global --add safe.directory "$LOCAL_DIR"
